@@ -50,13 +50,8 @@ Object.assign(ServerResponse.prototype, {
   },
 });
 
-async function listen({ port = 80 } = {}) {
-  const stack = new Error().stack;
-  const filepath = stack.match(
-    /(?<=^    at )file:\/\/\/\w:\/.+?(?=:[0-9]+:[0-9]+)/gm
-  )[0];
-  const srcDir = path.dirname(filepath);
-  const pages = await getPages("", srcDir);
+async function listen({ port = 80, dirname } = {}) {
+  const pages = await getPages("", path.dirname(dirname));
 
   const html = fs.readFileSync("index.html", "utf-8").replace(
     "</head>",
