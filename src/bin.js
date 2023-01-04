@@ -3,6 +3,7 @@ import listen from "./index.js";
 import fs from "fs";
 import path from "path";
 import { parseFile } from "./pages/parse-file.js";
+import { execSync } from "child_process";
 
 let [, , port] = process.argv;
 if (!port || isNaN(Number(port))) port = 80;
@@ -11,7 +12,7 @@ if (process.argv[2] == "init") {
   fs.mkdirSync("pages");
   fs.writeFileSync(
     "index.html",
-    "<!DOCTYPE html>\n<html>\n<head></head>\n<body></body>\n</html>"
+    '<!DOCTYPE html>\n<html>\n<head></head>\n<body>\n<div id="root"></div>\n</body>\n</html>'
   );
   fs.writeFileSync(
     "package.json",
@@ -27,6 +28,7 @@ if (process.argv[2] == "init") {
       2
     )
   );
+  execSync("npm install stellarjsx");
   process.exit();
 }
 
