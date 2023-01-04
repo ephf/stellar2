@@ -1,0 +1,10 @@
+node_modules/
+out/
+pages/
+
+.gitignore
+.npmignore
+package-lock.json
+
+index.html
+tailwind.config.cjs

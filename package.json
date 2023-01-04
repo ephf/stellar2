@@ -1,13 +1,26 @@
 {
-  "name": "stellar2",
+  "name": "stellarjs",
   "main": "src/index.js",
   "type": "module",
-  "scripts": {
-    "test": "nodemon --ignore out/ --ext jsx,js,html,css",
-    "start": "node index.js"
+  "bin": {
+    "star": "src/bin.js"
   },
-  "dependencies": {
-    "just-jsx": "^6.1.0",
-    "stellar2": "file:."
-  }
+  "scripts": {
+    "test": "star --test",
+    "start": "star"
+  },
+  "description": "I feel like I messed up on the first one so I made another",
+  "version": "0.0.0",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ephf/stellar2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ephf/stellar2/issues"
+  },
+  "homepage": "https://github.com/ephf/stellar2#readme"
 }
