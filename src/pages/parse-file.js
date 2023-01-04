@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import * as make from "./make.js";
+import getPages from "../pages.js";
 
 export function parseFile(dir) {
   const srcDir = "file://" + process.cwd();

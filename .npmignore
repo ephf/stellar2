@@ -1,6 +1,7 @@
 node_modules/
 out/
 pages/
+test/
 
 .gitignore
 .npmignore
