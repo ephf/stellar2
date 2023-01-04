@@ -16,7 +16,7 @@ export async function api(srcDir, read, url) {
 export async function jsx(srcDir, read, url, dir) {
   const jsxContent = fs.readFileSync(read, "utf-8");
   const jsContent =
-    'import jsx from "stellarjs/src/jsx/backend.js";\n' + parse(jsxContent);
+    'import jsx from "stellarjsx/src/jsx/backend.js";\n' + parse(jsxContent);
   const out = path.join("out", dir, randomUUID() + ".js");
 
   fs.writeFileSync(out, jsContent);

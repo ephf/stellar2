@@ -1,4 +1,4 @@
-# Stellar2
+# Stellarjsx
 
 - WIP!
 

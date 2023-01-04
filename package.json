@@ -1,5 +1,5 @@
 {
-  "name": "stellarjs",
+  "name": "stellarjsx",
   "main": "src/index.js",
   "type": "module",
   "bin": {
